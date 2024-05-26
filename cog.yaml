@@ -26,5 +26,5 @@ build:
 # predict.py defines how predictions are run on your model
 predict: "predict.py:Predictor"
 
-image: r8.im/simply-an-ape-with-a-plan/photomaker_ape
+image: r8.im/buddhiraz/photomaker_ape
 
