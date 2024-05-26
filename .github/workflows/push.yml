@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       model_name:
-        description: 'Ape/PhotoMakerV1"'
+        description: 'buddhiraz/photomaker_ape'
         required: true
 
 jobs:
@@ -28,3 +28,4 @@ jobs:
 
       - name: Push to Replicate
         run: cog push r8.im/${{ inputs.model_name }}
+        # push r8.im/buddhiraz/photomaker_ape
