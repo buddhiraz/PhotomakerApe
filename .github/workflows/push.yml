@@ -10,7 +10,8 @@ on:
 jobs:
   push_to_replicate:
     name: Push to Replicate
-    runs-on: ubuntu-latest
+    runs-on: runs-on,runner=2cpu-linux-x64
+
     steps:
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
@@ -32,5 +33,6 @@ jobs:
           token: ${{ secrets.REPLICATE_API_TOKEN }}
 
       - name: Push to Replicate
-        run: cog push r8.im/${{ inputs.model_name }}
-        # push r8.im/buddhiraz/photomaker_ape
+        run: cog push r8.im/${{ github.event.inputs.model_name }}
+        # run: cog push r8.im/buddhiraz/photomaker_ape
+
